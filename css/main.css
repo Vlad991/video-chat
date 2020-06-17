@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+html, body {
+  height: 100%;
+}
+
+container__footer {
+  margin-top: 500px;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 65px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 7px 50px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.footer__logo {
+  width: 174px;
+  height: 50px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  color: #000;
+  font-weight: normal;
+  line-height: 23px;
+  background-color: #C4C4C4;
+  position: absolute;
+  cursor: pointer;
+}
+
+.footer__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.footer__item {
+  margin-left: 15px;
+}
+
+.footer__item:first-child {
+  margin-left: 0;
+}
+
+.footer__timer {
+  width: 104px;
+  height: 31px;
+  border: 1px solid #00CFD7;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  color: #00CFD7;
+  font-weight: normal;
+  line-height: 21px;
+  border-radius: 15px;
+}
+
+.circle {
+  width: 31px;
+  height: 31px;
+  background-color: #00CFD7;
+  border: 1px solid #00CFD7;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.circle_disable {
+  border-color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+}
+
+.circle_disable .circle__img > svg * {
+  fill: rgba(0, 0, 0, 0.5);
+}
+
+.circle_red {
+  background-color: #EF2F2F;
+  border-color: #EF2F2F;
+}
+
+.circle__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.video-body {
+  background-color: #EDE8E5;
+  height: calc(100% - 65px);
+  padding: 15px 45px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.video-body_timer {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 100%;
+}
+
+.video-body__item {
+  margin: 15px 5px;
+}
+
+.video-card {
+  width: 310px;
+  height: 200px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.video-card__video {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.video-card__video img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.video-card__name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  border: 1px solid #000;
+  border-radius: 9px;
+  background-color: #F7A321;
+}
+
+.video-card__img {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.video-card__name-text {
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: normal;
+  line-height: 21px;
+}
+
+.timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.timer__heading {
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-size: 40px;
+  color: #58626B;
+  font-weight: bold;
+  line-height: 46px;
+}
+
+.timer__time {
+  margin-top: 50px;
+  width: 300px;
+  height: 300px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-right: 150px solid transparent;
+  border-top: 150px solid #F7A321;
+  border-left: 150px solid #F7A321;
+  border-bottom: 150px solid #F7A321;
+  border-top-left-radius: 150px;
+  border-top-right-radius: 150px;
+  border-bottom-left-radius: 150px;
+  border-bottom-right-radius: 150px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.timer__text {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-size: 57px;
+  color: #58626B;
+  font-weight: bold;
+  line-height: 65px;
+}
+
+/*# sourceMappingURL=main.css.map */

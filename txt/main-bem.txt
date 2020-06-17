@@ -1,0 +1,20 @@
+
+container__footer
+    footer
+        footer__logo
+        footer__buttons
+            footer__item footer__timer
+                circle
+                    circle__img
+
+container__video-body
+    video-body
+        video-body__item
+
+
+video-card
+    video-card__video
+    video-card__name
+        video-card__img
+        video-card__name-text
+    video-card__micro
