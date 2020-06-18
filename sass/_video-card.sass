@@ -11,27 +11,73 @@
   border-radius: 10px
   border: 1px solid #000
   cursor: pointer
+  &_middle
+    width: 780px
+    height: 400px
+    .video-card__name
+      width: 250px
+      height: 32px
+      left: 13px
+      bottom: 9px
+    .video-card__micro
+      top: 20px
+      right: 20px
+  &_big
+    width: 780px
+    height: 825px
+    .video-card__name
+      width: 250px
+      height: 32px
+      left: 10px
+      bottom: 10px
+    .video-card__micro
+      top: 20px
+      right: 20px
+  &_large
+    width: 950px
+    height: 620px
+    .video-card__name
+      width: 300px
+      height: 36px
+      left: 10px
+      bottom: 10px
+    .video-card__micro
+      top: 20px
+      right: 20px
+  &_super-large
+    width: 1356px
+    height: 825px
+    .video-card__name
+      width: 300px
+      height: 36px
+      left: 10px
+      bottom: 10px
+    .video-card__micro
+      top: 20px
+      right: 20px
 
 .video-card__video
   width: 100%
   height: 100%
   border-radius: 10px
+  overflow: hidden
   img
-    width: 100%
-    height: 100%
+    width: calc(100% + 4px)
+    height: calc(100% + 4px)
     border-radius: 10px
+    margin: -2px 0px 0 -2px
 
 .video-card__name
   position: absolute
-  bottom: 0
-  left: 0
-  width: 100%
+  bottom: 1px
+  left: 1px
+  width: calc(100% - 2px)
   height: 36px
   display: flex
   align-items: center
   box-sizing: border-box
   padding: 5px 10px
-  border: 1px solid #000
+  //border: 1px solid #000
   border-radius: 9px
   background-color: $yellow
 
@@ -44,3 +90,6 @@
   @include fontWSCL(normal, 18px, rgba(0, 0, 0, 0.8), 21px)
 
 .video-card__micro
+  position: absolute
+  top: 10px
+  right: 10px

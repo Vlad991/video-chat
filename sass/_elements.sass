@@ -3,3 +3,19 @@
 @import "tools/mixin"
 @import "tools/media"
 
+.button
+  width: 114px
+  height: 32px
+  box-sizing: border-box
+  border: 1px solid $blue
+  background-color: $green
+  border-radius: 43px
+  display: flex
+  justify-content: center
+  align-items: center
+  @include fontWSCL(normal, 15px, #fff, 17px)
+  cursor: pointer
+  &_inverse
+    background-color: transparent
+    border-color: $gray
+    color: gray
