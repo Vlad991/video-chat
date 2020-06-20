@@ -11,10 +11,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
-html, body {
-  height: 100%;
-}
-
 .button {
   width: 114px;
   height: 32px;
@@ -47,7 +43,13 @@ html, body {
   color: gray;
 }
 
+.container__footer {
+  position: fixed;
+  bottom: 0;
+}
+
 .footer {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,7 +58,6 @@ html, body {
   -ms-flex-align: center;
   align-items: center;
   padding: 7px 50px;
-  position: relative;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background-color: #fff;
@@ -176,41 +177,6 @@ html, body {
   align-items: center;
 }
 
-.video-body {
-  background-color: #EDE8E5;
-  height: calc(100% - 65px);
-  padding: 15px 45px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  overflow: scroll;
-}
-
-.video-body_timer {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  height: 100%;
-}
-
-.video-body__item {
-  margin: 15px 5px;
-}
-
 .video-card {
   width: 310px;
   height: 200px;
@@ -220,6 +186,23 @@ html, body {
   border-radius: 10px;
   border: 1px solid #000;
   cursor: pointer;
+}
+
+.video-card_small {
+  width: 214px;
+  height: 170px;
+}
+
+.video-card_small .video-card__name {
+  height: 26px;
+}
+
+.video-card_small .video-card__name-text {
+  font-size: 12px;
+}
+
+.video-card_small .video-card__img {
+  width: 15px;
 }
 
 .video-card_middle {
@@ -298,10 +281,11 @@ html, body {
 }
 
 .video-card__video img {
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
-  margin: -2px 0px 0 -2px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .video-card__name {
@@ -327,6 +311,9 @@ html, body {
   width: 25px;
   height: 25px;
   margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .video-card__name-text {
@@ -342,6 +329,219 @@ html, body {
   position: absolute;
   top: 10px;
   right: 10px;
+}
+
+.video-body {
+  background-color: #EDE8E5;
+  padding: 15px 45px 80px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 900px;
+}
+
+.video-body_timer {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 100%;
+}
+
+.video-body__videos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.video-body__videos_large-and-kids .video-card_large {
+  width: 58.3%;
+}
+
+.video-body__videos_large-and-kids .video-body__item:not(.video-card_large) {
+  width: 19%;
+}
+
+.video-body__videos_large-and-kids .video-body__col {
+  width: 19%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.video-body__videos_large-and-kids .video-body__col .video-body__item {
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.video-body__videos_duo {
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.video-body__videos_duo .video-body__item {
+  width: 50%;
+  height: 600px;
+}
+
+.video-body__videos_four {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.video-body__videos_four .video-body__item {
+  width: 49%;
+  margin-bottom: 7.5px;
+  margin-top: 7.5px;
+}
+
+.video-body__videos_super-large-and-kids .video-card_super-large {
+  width: 79%;
+}
+
+.video-body__videos_super-large-and-kids .video-body__item:not(.video-card_super-large) {
+  width: 19%;
+}
+
+.video-body__videos_super-large-and-kids .video-body__col {
+  width: 19%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.video-body__videos_super-large-and-kids .video-body__col .video-body__item {
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.video-body__col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.video-body__side-info {
+  -ms-flex-preferred-size: 264px;
+  flex-basis: 264px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.side-info {
+  overflow-y: scroll;
+  padding-right: 14px;
+  padding-left: 40px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  max-height: 700px;
+}
+
+.side-info::-webkit-scrollbar {
+  width: 4px;
+}
+
+.side-info::-webkit-scrollbar-track {
+  background-color: #C4C4C4;
+  border-radius: 2px;
+}
+
+.side-info::-webkit-scrollbar-thumb {
+  background-color: #58626B;
+  border-radius: 2px;
+  height: 100px;
+}
+
+.side-info__heading {
+  margin-top: 15px;
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  color: #58626B;
+  font-weight: bold;
+  line-height: 21px;
+}
+
+.side-info__text {
+  margin-top: 37px;
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  color: #58626B;
+  font-weight: normal;
+  line-height: 17px;
+  text-align: justify;
+  opacity: 0.8;
+}
+
+.side-info__footer {
+  border-top: 3px solid #C69776;
+  padding-top: 40px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 70px;
+}
+
+.side-info__file {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 10px 10px;
+}
+
+.side-info__file-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.side-info__file-text {
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  color: #58626B;
+  font-weight: normal;
+  line-height: 17px;
+  margin-top: 5px;
+}
+
+.video-body__item {
+  margin: 5px 5px;
+  width: 23.7%;
 }
 
 .container__modal {
@@ -656,8 +856,6 @@ html, body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.25);
-  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.25);
 }
 
 .timer__text {

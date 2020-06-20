@@ -11,6 +11,15 @@
   border-radius: 10px
   border: 1px solid #000
   cursor: pointer
+  &_small
+    width: 214px
+    height: 170px
+    .video-card__name
+      height: 26px
+    .video-card__name-text
+      font-size: 12px
+    .video-card__img
+      width: 15px
   &_middle
     width: 780px
     height: 400px
@@ -62,10 +71,10 @@
   border-radius: 10px
   overflow: hidden
   img
-    width: calc(100% + 4px)
-    height: calc(100% + 4px)
+    width: 100%
+    height: 100%
     border-radius: 10px
-    margin: -2px 0px 0 -2px
+    object-fit: cover
 
 .video-card__name
   position: absolute
@@ -85,6 +94,7 @@
   width: 25px
   height: 25px
   margin-right: 10px
+  display: flex
 
 .video-card__name-text
   @include fontWSCL(normal, 18px, rgba(0, 0, 0, 0.8), 21px)

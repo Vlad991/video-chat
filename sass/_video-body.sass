@@ -7,19 +7,116 @@
 
 .video-body
   background-color: $beige
-  height: calc(100% - 65px)
-  padding: 15px 45px
+  padding: 15px 45px 80px
   box-sizing: border-box
   display: flex
-  justify-content: space-between
-  align-items: flex-start
-  align-content: flex-start
-  flex-wrap: wrap
-  overflow: scroll
+  min-height: 900px
   &_timer
     justify-content: center
     align-content: center
     height: 100%
 
+.video-body__videos
+  display: flex
+  align-items: flex-start
+  align-content: flex-start
+  flex-wrap: wrap
+  &_large-and-kids
+    .video-card_large
+      width: 58.3%
+    .video-body__item:not(.video-card_large)
+      width: 19%
+    .video-body__col
+      width: 19%
+      margin-left: 5px
+      margin-right: 5px
+      .video-body__item
+        width: 100%
+        margin-right: 0
+        margin-left: 0
+  &_duo
+    flex-wrap: nowrap
+    .video-body__item
+      width: 50%
+      height: 600px
+  &_four
+    flex-wrap: wrap
+    justify-content: space-around
+    .video-body__item
+      width: 49%
+      margin-bottom: 7.5px
+      margin-top: 7.5px
+  &_super-large-and-kids
+    .video-card_super-large
+      width: 79%
+    .video-body__item:not(.video-card_super-large)
+      width: 19%
+    .video-body__col
+      width: 19%
+      margin-left: 5px
+      margin-right: 5px
+      .video-body__item
+        width: 100%
+        margin-right: 0
+        margin-left: 0
+
+.video-body__col
+  display: flex
+  flex-direction: column
+
+.video-body__side-info
+  flex-basis: 264px
+  flex-shrink: 0
+
+.side-info
+  overflow-y: scroll
+  padding-right: 14px
+  padding-left: 40px
+  box-sizing: border-box
+  max-height: 700px
+  &::-webkit-scrollbar
+    width: 4px
+  &::-webkit-scrollbar-track
+    background-color: #C4C4C4
+    border-radius: 2px
+  &::-webkit-scrollbar-thumb
+    background-color: $gray
+    border-radius: 2px
+    height: 100px
+
+.side-info__heading
+  margin-top: 15px
+  @include fontWSCL(bold, 18px, $gray, 21px)
+
+.side-info__text
+  margin-top: 37px
+  @include fontWSCL(normal, 15px, $gray, 17px)
+  text-align: justify
+  opacity: 0.8
+
+.side-info__footer
+  border-top: 3px solid #C69776
+  padding-top: 40px
+  box-sizing: border-box
+  display: flex
+  flex-wrap: wrap
+  margin-top: 70px
+
+.side-info__file
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin: 0 10px 10px
+
+.side-info__file-img
+  display: flex
+  justify-content: center
+  align-items: center
+
+.side-info__file-text
+  @include fontWSCL(normal, 15px, $gray, 17px)
+  margin-top: 5px
+
 .video-body__item
-  margin: 15px 5px
+  margin: 5px 5px
+  width: 23.7%
