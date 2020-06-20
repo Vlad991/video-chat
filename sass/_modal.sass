@@ -6,11 +6,15 @@
 .container__modal
   width: 100%
   height: calc(100% - 65px)
-  background-color: $beige
+  background-color: #777370
   opacity: 0.8
   display: flex
   align-items: center
   justify-content: center
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 2
 
 .modal
   width: 580px
@@ -146,3 +150,4 @@
   border-radius: 14px 0 0 14px
   @include fontWSCL(normal, 22px, $gray, 25px)
   text-align: center
+  z-index: 2
