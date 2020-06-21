@@ -10,11 +10,18 @@
   padding: 15px 45px 80px
   box-sizing: border-box
   display: flex
-  min-height: 900px
+  min-height: 100%
+  @include tablet
+    padding: 15px 10px 80px
+  @include mobile
+    flex-direction: column
   &_timer
     justify-content: center
     align-content: center
     height: 100%
+    width: 100%
+    @include tablet
+      padding: 0
 
 .video-body__videos
   display: flex
@@ -22,43 +29,152 @@
   align-content: flex-start
   flex-wrap: wrap
   &_large-and-kids
+    @include tabletSmall
     .video-card_large
       width: 58.3%
+      @include desktopSmall
+        width: 55.8%
+      @include tablet
+        width: 47%
+      @include tabletSmall
+        height: 544px
+        width: 70%
+        margin-left: 0
+        margin-right: 0
+      .video-card__name
+        @include tabletSmall
+          width: 100%
+          left: 0
+          bottom: 0
     .video-body__item:not(.video-card_large)
       width: 19%
+      @include desktopSmall
+        width: 18%
+      @include tablet
+        width: 23%
+      @include tabletSmall
+        height: 85px
+        margin-top: 3px
+        margin-bottom: 3px
     .video-body__col
       width: 19%
       margin-left: 5px
       margin-right: 5px
+      @include desktopSmall
+        width: 18%
+      @include tablet
+        order: -1
+        width: 23%
       .video-body__item
         width: 100%
         margin-right: 0
         margin-left: 0
+    .video-card__name
+      @include tabletSmall
+        height: 22px
+    .video-card__name-text
+      @include desktopSmall
+        font-size: 16px
+      @include tabletSmall
+        font-size: 10px
+        line-height: 10px
+    .video-card__img
+      width: 12px
   &_duo
     flex-wrap: nowrap
+    @include mobile
+      flex-wrap: wrap
     .video-body__item
       width: 50%
       height: 600px
+      @include tabletSmall
+        height: 300px
+      @include mobile
+        width: 100%
+    .video-card__name
+      width: 194px
   &_four
     flex-wrap: wrap
     justify-content: space-around
     .video-body__item
-      width: 49%
+      width: 47.5%
       margin-bottom: 7.5px
       margin-top: 7.5px
+      @include tabletSmall
+        height: 157px
+      @include mobile
+        height: 290px
+        width: 46%
+    .video-card__name
+      @include tabletSmall
+        width: 100%
+        left: 0
+        bottom: 1px
+    .video-card__name-text
+      @include mobile
+        font-size: 12px
+        line-height: 12px
   &_super-large-and-kids
     .video-card_super-large
       width: 78%
+      @include desktopSmall
+        width: 74%
+      @include tabletSmall
+        width: 71.5%
+      @include mobile
+        height: 370px
+        width: 71%
+      .video-card__name
+        @include tabletSmall
+          width: 100%
+          left: 0
+          bottom: 1px
     .video-body__item:not(.video-card_super-large)
       width: 19%
+      @include desktopSmall
+        width: 18%
+      @include tabletSmall
+        width: 23%
+      @include mobile
+        height: 85px
+        width: 22%
+      .video-card__name-text
+        @include tablet
+          font-size: 14px
+          line-height: 14px
+        @include tabletSmall
+          font-size: 10px
+          line-height: 10px
+      .video-card__name
+        @include tabletSmall
+          height: 26px
+        @include mobile
+          padding: 1px
+      .video-card__img
+        @include tabletSmall
+          width: 15px
+        @include mobile
+          margin: 0
     .video-body__col
       width: 19%
       margin-left: 5px
       margin-right: 5px
+      @include desktopSmall
+        width: 18.5%
+      @include tabletSmall
+        width: 23%
       .video-body__item
         width: 100%
         margin-right: 0
         margin-left: 0
+
+.video-body__row
+  display: flex
+  @include tabletSmall
+    flex-direction: column
+    height: 546px
+    flex-wrap: wrap
+    margin-bottom: 10px
 
 .video-body__col
   display: flex
@@ -67,6 +183,9 @@
 .video-body__side-info
   width: 308px
   flex-shrink: 0
+  @include mobile
+    order: -1
+    margin-bottom: 20px
 
 .side-info
   overflow-y: scroll
@@ -76,13 +195,23 @@
   max-height: 700px
   &::-webkit-scrollbar
     width: 4px
+    @include mobile
+      width: auto
   &::-webkit-scrollbar-track
     background-color: #C4C4C4
     border-radius: 2px
+    @include mobile
+      background-color: transparent
+      border-radius: 0
   &::-webkit-scrollbar-thumb
     background-color: $gray
     border-radius: 2px
     height: 100px
+    @include mobile
+      background-color: transparent
+  @include mobile
+    width: 100%
+    padding: 0 10px
 
 .side-info__heading
   margin-top: 15px
@@ -120,3 +249,7 @@
 .video-body__item
   margin: 5px 5px
   width: 23.7%
+  @include tablet
+    width: 30%
+  @include tabletSmall
+    width: 100%

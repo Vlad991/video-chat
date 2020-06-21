@@ -15,6 +15,9 @@
   top: 0
   left: 0
   z-index: 2
+  @include mobile
+    padding: 0 10px
+    box-sizing: border-box
 
 .modal
   width: 580px
@@ -22,6 +25,9 @@
   box-sizing: border-box
   border-radius: 12px
   background-color: #fff
+  @include tabletSmall
+    width: 450px
+    padding: 13px 20px 26px 28px
 
 .modal__heading
   display: flex
@@ -41,6 +47,10 @@
   border-radius: 26px
   background-color: #fff
   padding: 4px
+  @include tabletSmall
+    width: 36px
+    height: 36px
+    margin-right: 7px
   &_red
     border-color: $red
     .modal__info-img
@@ -55,9 +65,13 @@
   justify-content: center
   align-items: center
   @include fontWSCL(bold, 30px, #fff, 20px)
+  @include tabletSmall
+    font-size: 22px
 
 .modal__info-text
   @include fontWSCL(bold, 18px, $gray, 21px)
+  @include tabletSmall
+    font-size: 14px
 
 .modal__timer
   width: 77px
@@ -69,15 +83,26 @@
   justify-content: center
   align-items: center
   @include fontWSCL(normal, 18px, $blue, 21px)
+  @include tabletSmall
+    height: 26px
+    font-size: 12px
+    line-height: 14px
+    width: 52px
 
 .modal__description
   margin-top: 10px
   margin-left: 66px
   @include fontWSCL(normal, 17px, $gray, 20px)
+  @include tabletSmall
+    margin-left: 42px
+    font-size: 12px
+    line-height: 13px
 
 .modal__clients-list
   margin-top: 22px
   margin-left: 66px
+  @include tabletSmall
+    margin-left: 42px
 
 .clients-list
 
@@ -89,6 +114,9 @@
   width: 51px
   height: 51px
   margin-right: 10px
+  @include tabletSmall
+    width: 34px
+    height: 34px
   img
     width: 100%
     height: 100%
@@ -99,13 +127,21 @@
   display: flex
   flex-direction: column
   justify-content: space-between
+  @include tabletSmall
+    padding: 0
 
 .clients-list__client-name
   @include fontWSCL(bold, 18px, #000, 21px)
+  @include tabletSmall
+    font-size: 12px
+    line-height: 14px
 
 .clients-list__client-rank
   @include fontWSCL(normal, 13px, $gray, 15px)
   text-transform: uppercase
+  @include tabletSmall
+    font-size: 9px
+    line-height: 10px
 
 .clients-list__appear
   display: flex
@@ -119,6 +155,9 @@
 
 .clients-list__appear-text
   @include fontWSCL(normal, 18px, $blue, 21px)
+  @include tabletSmall
+    font-size: 12px
+    line-height: 14px
 
 .clients-list__appear-button
   width: 19px
@@ -129,11 +168,16 @@
   justify-content: center
   align-items: center
   margin-left: 15px
+  @include tabletSmall
+    width: 13px
+    height: 13px
 
 .modal__buttons
   display: flex
   margin-left: 66px
   margin-top: 25px
+  @include tabletSmall
+    margin-left: 42px
 
 .modal__button
   &:first-child
