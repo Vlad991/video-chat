@@ -41,11 +41,16 @@
   flex-basis: 100%
   @include tabletSmall
     justify-content: space-around
+  @include mobile-landscape
+    justify-content: center
+    margin-right: 67px
 
 .footer__item
   margin-left: 15px
   @include tabletSmall
     margin-left: 0
+  @include mobile-landscape
+    margin-left: 15px
   &:first-child
     margin-left: 0
 
